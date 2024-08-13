@@ -10,14 +10,14 @@ def calculate_qi_stats(pisa_mean, pisa_sd, pisa_mean_global, pisa_sd_global, qi_
 def generate_probability_table(qi_mean, qi_sd, scores):
     data = {
         "QI Score": [],
-        "Probabilidade (%)": []
+        "Probabilidade (%) de QI maior ou igual": []
     }
     
     for score in scores:
         z_score = (score - qi_mean) / qi_sd
         probability = 1 - stats.norm.cdf(z_score)
         data["QI Score"].append(score)
-        data["Probabilidade (%)"].append(probability * 100)  # Convertendo para percentual
+        data["Probabilidade (%) de QI maior ou igual"].append(probability * 100)  # Convertendo para percentual
     
     df = pd.DataFrame(data)
     return df
@@ -33,7 +33,7 @@ def main():
     # Methodology
     st.markdown("[Metodologia](https://github.com/seu-usuario/seu-repositorio/blob/main/README.md)", unsafe_allow_html=True)
     
-    #National IQ score and std
+    # National IQ score and std
     st.header("Obtendo o QI Nacional")
     pisa_mean = st.number_input("Digite o score médio de matemática do PISA:", value=379)
     pisa_sd_diff = st.number_input("Digite a diferença da performance de matemática PISA entre o percentil 90 e percentil 10:", value=194)
