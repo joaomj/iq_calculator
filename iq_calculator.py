@@ -35,6 +35,7 @@ def main():
     
     # National IQ score and std
     st.header("Obtendo o QI Nacional")
+    st.text("Valores padrão são as notas do Brasil no PISA 2022 - Matemática.")
     pisa_mean = st.number_input("Digite o score médio de matemática do PISA:", value=379)
     pisa_sd_diff = st.number_input("Digite a diferença da performance de matemática PISA entre o percentil 90 e percentil 10:", value=194)
     pisa_mean_global = 500
