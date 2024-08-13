@@ -85,5 +85,13 @@ To run the Streamlit application locally, execute:
 streamlit run your_script_name.py
 ```
 
+## References
+- [Lynn, R., & Mikk, J. (2009). National IQs predict educational attainment in math, reading and science across 56 nations. Intelligence, 37(3), 305–310.](https://doi.org/10.1016/j.intell.2009.01.002)
+- [National IQ Means, Calibrated and Transformed from Educational Attainment and Their Underlying Gene Frequencies - Volkmar Weiss](http://www.v-weiss.de/calibration.html#:~:text=PISA%20scores%2C%20mean%20500%2C%20standard,PISA%20567%20to%20IQ%20110.)
+- [Garett Jones, Niklas Potrafke, Human capital and national institutional quality: Are TIMSS, PISA, and national average IQ robust predictors? Intelligence, Volume 46, 2014, Pages 148-155, ISSN 0160-2896](https://doi.org/10.1016/j.intell.2014.05.011)
+
+![IQ x PISA correlation](iq-vs-pisa.jpeg)
+
+
 ## Contact
 For more info and suggestions, reach me at [Linkedin](linkedin.com/in/joaomj).
