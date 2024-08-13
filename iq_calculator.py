@@ -30,6 +30,9 @@ def calculate_probability(qi_mean, qi_sd, user_score):
 def main():
     st.title("Calculadora de QI")
 
+    # Methodology
+    st.markdown("[Metodologia](https://github.com/seu-usuario/seu-repositorio/blob/main/README.md)", unsafe_allow_html=True)
+    
     #National IQ score and std
     st.header("Obtendo o QI Nacional")
     pisa_mean = st.number_input("Digite o score médio de matemática do PISA:", value=379)
