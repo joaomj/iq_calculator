@@ -28,11 +28,12 @@ def calculate_probability(qi_mean, qi_sd, user_score):
     return probability * 100  # Convertendo para percentual
 
 def main():
-    st.title("Calculadora de QI Nacional")
+    st.titler("Calculadora de QI")
 
     #National IQ score and std
-    pisa_mean = st.number_input("Digite o score médio de matemática do PISA:", value=379.0)
-    pisa_sd_diff = st.number_input("Digite a diferença da performance de matemática PISA entre o percentil 90 e percentil 10:", value=194.0)
+    st.header("Obtendo o QI Nacional")
+    pisa_mean = st.number_input("Digite o score médio de matemática do PISA:", value=379)
+    pisa_sd_diff = st.number_input("Digite a diferença da performance de matemática PISA entre o percentil 90 e percentil 10:", value=194)
     pisa_mean_global = 500
     pisa_sd_global = 100
     qi_mean_global = 100
@@ -41,17 +42,19 @@ def main():
     qi_mean_national, qi_sd_national = calculate_qi_stats(
         pisa_mean, pisa_sd_diff / 2.56, pisa_mean_global, pisa_sd_global, qi_mean_global, qi_sd_global
     )
-    st.write(f"Média do QI nacional: {qi_mean_national:.2f}")
+    st.write(f"Média do QI nacional: {qi_mean_national}")
     st.write(f"Desvio padrão do QI nacional: {qi_sd_national:.2f}")
 
     
     # Probability table
     scores = [50, 60, 70, 80, 90, 100, 110, 120, 130]
     probability_table = generate_probability_table(qi_mean_national, qi_sd_national, scores)
-    st.write("Tabela de Probabilidade:")
+    st.header("Tabela de Probabilidade:")
+    st.text("Conforme QI médio nacional e desvio-padrão calculados acima.")
     st.table(probability_table)
 
     # User IQ score
+    st.header("Calculadora de QI individual")
     user_score = st.number_input("Digite um valor de QI para calcular a probabilidade de encontrar alguém com QI maior ou igual:", value=100)
     probability = calculate_probability(qi_mean_national, qi_sd_national, user_score)
     st.write(f"Probabilidade de encontrar alguém com QI maior ou igual a {user_score}: {probability:.2f}%")
