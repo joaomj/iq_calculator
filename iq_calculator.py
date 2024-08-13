@@ -31,7 +31,7 @@ def main():
     st.title("Calculadora de QI")
 
     # Methodology
-    st.markdown("[Metodologia](https://github.com/seu-usuario/seu-repositorio/blob/main/README.md)", unsafe_allow_html=True)
+    st.markdown("[Metodologia](https://github.com/joaomj/iq_calculator/blob/master/README.md)", unsafe_allow_html=True)
     
     # National IQ score and std
     st.header("Obtendo o QI Nacional")
