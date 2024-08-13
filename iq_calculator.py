@@ -28,7 +28,7 @@ def calculate_probability(qi_mean, qi_sd, user_score):
     return probability * 100  # Convertendo para percentual
 
 def main():
-    st.titler("Calculadora de QI")
+    st.title("Calculadora de QI")
 
     #National IQ score and std
     st.header("Obtendo o QI Nacional")
